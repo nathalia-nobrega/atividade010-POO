@@ -2,7 +2,7 @@ from pong.paddle import Paddle
 from pong.ball import Ball
 from pong.velocity import Velocity
 from pong.position import Position
-from pong.scoreboard import Scoreboard
+from pong.HUD import HUD
 from pong.wall import Wall
 
 class Game:
@@ -12,7 +12,7 @@ class Game:
         self.ball = Ball(Position(self.wall.width // 2, self.wall.height // 2), Velocity(1, 1))
         self.player1 = Paddle(Position(1, self.wall.height // 2 - 3), width=1, height=6, speed=1)
         self.player2 = Paddle(Position(self.wall.width - 2, self.wall.height // 2 - 3), width=1, height=6, speed=1)
-        self.scoreboard = Scoreboard()
+        self.scoreboard = HUD()
 
         # state of the game
         self.running = True

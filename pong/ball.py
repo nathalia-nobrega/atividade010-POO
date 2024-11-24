@@ -20,7 +20,6 @@ class Ball:
             print("Colisão com a raquete!")
 
     def detect_collision_with_walls(self, wall: Wall):
-
         if self.position.y <= wall.position.y:
             self.velocity.dy *= -1
             print("Colisão com a parede superior!")

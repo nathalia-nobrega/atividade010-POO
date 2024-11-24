@@ -1,12 +1,14 @@
+from pong.position import Position
+
+
 class Paddle:
-    def __init__(self, x=50, y=20, width=10):
-        self.x = x
-        self.y = y
+    def __init__(self, position: Position, width=10):
+        self.position = position
         self.width = width
 
     def move(self, direction):
         if direction == "esq":
-            self.x -= 1
+            self.position.x -= 1
         elif direction == "dir":
-            self.x += 1
-        print(f"A raquete se moveu para a {direction}. Nova posição: x={self.x}, y={self.y}")
+            self.position.y += 1
+        print(f"A raquete se moveu para a {direction}. Nova posição: x={self.position.x}, y={self.position.y}")
